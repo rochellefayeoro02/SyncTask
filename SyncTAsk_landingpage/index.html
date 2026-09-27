@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="SyncTask brings your projects, people, and progress together.">
+  <title>SyncTask — Shared progress</title>
+  <link rel="stylesheet" href="styles.css">
+  <script src="script.js" defer></script>
+</head>
+
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="header wrap">
+    <a class="logo" href="#" aria-label="SyncTask home">
+  <img src="SyncTaskLogo.svg" alt="" class="logo-image">
+  SyncTask
+</a>
+    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu</button>
+    <nav id="navigation" aria-label="Main navigation">
+      <a href="#features">Features</a><a href="#analytics">Analytics</a><a href="#pricing">Pricing</a>
+      <a class="button outline" href="#pricing">Log in</a><button class="button" data-plan="Starter">Get started</button>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero lavender">
+    <div class="wrap hero-grid">
+    <div>
+    <p class="eyebrow">A little structure. A lot of progress.</p>
+    <h1>Great projects.<br>Shared progress.</h1>
+    <p class="intro">Bring your tasks, team, and tools together. Know what's moving—and what needs a little attention.</p>
+    <div class="actions"><button class="button" data-plan="Starter">Get started free</button>
+    <a class="button white" href="#features">Explore features <span aria-hidden="true">↗</span></a>
+          
+  </div>
+    <p class="fine-print">No credit card. No complicated setup.</p>
+  </div>
+
+  <article class="project-card" aria-label="Example project dashboard">
+    <p class="eyebrow">Your team, in sync</p><h2>Website launch</h2><p class="muted small">A clear view of the finish line.</p>
+    <div class="stats"><div><strong>24</strong><span>Tasks</span></div>
+    <div><strong>7</strong> <span>In progress</span></div>
+    <div> <strong>56%</strong>
+    <span>Complete</span></div>
+    </div>
+
+    <h3 class="small">This week</h3>
+    <ul class="task-list">
+    <li>Polish the landing page <span>In progress</span></li>
+    <li>Review mobile layouts <span>Review</span></li>
+    <li>Share launch checklist <span>Done</span></li>
+    </ul>
+    </article>
+    </div>
+    </section>
+
+  <section class="features wrap" id="features">
+    <p class="eyebrow">Your toolkit for a better workday</p><h2>Everything your team needs to move forward.</h2>
+    <div class="feature-grid">
+    <article><div class="accent-line"></div>
+      <h3>Keep work in one place</h3><p>Organize tasks, share files, and give everyone a clear view of what’s happening.</p></article>
+    <article><div class="accent-line"></div>
+      <h3>Make contributions visible</h3><p>See progress at a glance and celebrate every step forward.</p></article>
+    <article><div class="accent-line"></div><h3>Turn updates into action</h3>
+      <p>Stay aligned, avoid surprises, and follow up on the things that really matter.</p></article>
+  </div>
+  </section>
+
+  <section class="lavender" id="analytics">
+    <div class="wrap analytics-grid"><div>
+      <p class="eyebrow">Better insights</p>
+      <h2>Less guessing.<br>More progress.</h2>
+      <p class="intro">Turn everyday work into clear insights. See where your team’s time goes.</p>
+      <button class="button white" id="insights-toggle" aria-expanded="false" aria-controls="insights">Explore detailed stats <span aria-hidden="true">↗</span></button>
+      <p id="insights" class="insights" hidden>Your team completed 146 tasks this week. Thursday led the way with 30 tasks completed.</p>
+    </div>
+
+    <figure class="chart-card"><figcaption><h3>Tasks completed</h3>
+      <p class="muted small">This week</p>
+    </figcaption>
+
+    <div class="chart" role="img" aria-label="Tasks completed: Monday 12, Tuesday 20, Wednesday 15, Thursday 30, Friday 25, Saturday 18, Sunday 26.">
+    <div style="--value:40%"><span>12</span>
+    <i></i><small>Mon</small></div>
+    <div style="--value:67%"><span>20</span>
+    <i></i><small>Tue</small></div>
+    <div style="--value:50%"><span>15</span><i></i>
+    <small>Wed</small></div>
+    <div class="highlight" style="--value:100%"><span>30</span><i></i>
+    <small>Thu</small></div><div style="--value:83%"><span>25</span><i></i>
+    <small>Fri</small></div><div style="--value:60%"><span>18</span><i></i>
+    <small>Sat</small></div><div style="--value:87%"><span>26</span><i></i>
+    <small>Sun</small></div></div></figure></div>
+    </section>
+
+    <section class="pricing wrap" id="pricing"><p class="eyebrow">For every kind of team</p>
+      <h2>Start small. Grow together.</h2>
+
+      <div class="pricing-grid">
+      <article class="plan"><h3>Starter</h3><p>For everyday plans.</p>
+        <div class="price">Free</div>
+        <ul>
+          <li>Up to 10 members</li>
+          <li>5 active projects</li>
+          <li>10 GB storage</li>
+          <li>Basic task management</li>
+          <li>Community support</li>
+        </ul>
+        <button class="button outline" data-plan="Starter">Get started free</button>
+      </article>
+
+      <article class="plan featured">
+        <h3>Plus</h3>
+        <p>For growing teams.</p>
+        <div class="price">₱109<span> / month</span></div>
+        <ul>
+          <li>Up to 50 members</li>
+          <li>20 active projects</li>
+          <li>50 GB storage</li>
+          <li>Advanced analytics</li>
+          <li>Custom project workflows</li>
+        </ul>
+        <button class="button" data-plan="Plus">Choose Plus</button>
+      </article>
+
+      <article class="plan">
+        <h3>Pro</h3>
+        <p>For bigger goals.</p>
+        <div class="price">₱199<span> / month</span></div>
+        <ul>
+          <li>Up to 100 members</li>
+          <li>100 active projects</li>
+          <li>100 GB storage</li>
+          <li>Custom integrations</li>
+          <li>Account-wide insights</li>
+        </ul>
+          <button class="button outline" data-plan="Pro">Explore Pro</button></article>
+    </div></section>
+
+    <section class="cta"><div class="wrap"><h2>Your next great project starts here.</h2>
+      <p>Give your team a shared place to make it happen.</p>
+      <button class="button" data-plan="Starter">Get started free</button>
+    </div>
+  </section>
+
+  </main>
+  <footer class="wrap"> <a class="logo" href="#" aria-label="SyncTask home">
+  <img src="SyncTaskLogo.svg" alt="" class="logo-image">
+  SyncTask
+</a><p>Great projects. Better teamwork.</p><a class="button outline" href="#">Back to top ↑</a></footer>
+  <dialog id="plan-dialog" aria-labelledby="dialog-title">
+    <button class="close" aria-label="Close dialog">×</button>
+    <p class="eyebrow">Let’s get organized</p><h2 id="dialog-title">Your Starter plan</h2>
+    <p> Your selected plan is ready to connect to a signup or checkout service.</p>
+    <button class="button close-dialog">Continue exploring</button>
+  </dialog>
+</body>
+</html>
