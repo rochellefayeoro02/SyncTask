@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>SyncTask | Log in and Sign up</title>
+
+  <link rel="stylesheet" href="login.css">
+  <script src="login.js" defer></script>
+</head>
+
+<body>
+  <main class="auth-page">
+    <section class="auth-card" aria-labelledby="form-title">
+
+      <!-- Logo -->
+      <a class="brand" href="#login" aria-label="SyncTask home">
+        <img
+          class="brand-logo"
+          src="SyncTaskLogo.svg"
+          alt=""
+          width="40"
+          height="40"
+        >
+
+        <span>SyncTask</span>
+      </a>
+
+      <!-- Heading -->
+      <header class="auth-heading">
+        <h1 id="form-title" tabindex="-1">
+          Welcome <span>back</span>
+        </h1>
+
+        <p id="form-description">
+          Log in to your account to continue where you left off.
+        </p>
+      </header>
+
+      <!-- Log-in form -->
+      <form id="login-form" class="auth-form" novalidate>
+        <div class="field">
+          <label class="visually-hidden" for="login-email">
+            Email address
+          </label>
+
+          <input
+            id="login-email"
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            aria-describedby="login-email-error"
+            required
+          >
+
+          <p
+            id="login-email-error"
+            class="field-error"
+          ></p>
+        </div>
+
+        <div class="field">
+          <label class="visually-hidden" for="login-password">
+            Password
+          </label>
+
+          <input
+            id="login-password"
+            name="password"
+            type="password"
+            placeholder="Enter your password"
+            autocomplete="current-password"
+            aria-describedby="login-password-error"
+            required
+          >
+
+          <p
+            id="login-password-error"
+            class="field-error"
+          ></p>
+        </div>
+
+        <a class="forgot-link" href="#reset">
+          Forgot password?
+        </a>
+
+        <button class="submit-button" type="submit">
+          Log in
+        </button>
+
+        <div class="divider" aria-hidden="true">
+          <span>or</span>
+        </div>
+
+        <p class="switch-text">
+          Don't have an account?
+          <a href="#signup">Sign up</a>
+        </p>
+      </form>
+
+      <!-- Sign-up form -->
+      <form id="signup-form" class="auth-form" novalidate hidden>
+        <div class="field">
+          <label class="visually-hidden" for="signup-email">
+            Email address
+          </label>
+
+          <input
+            id="signup-email"
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            aria-describedby="signup-email-error"
+            required
+          >
+
+          <p
+            id="signup-email-error"
+            class="field-error"
+          ></p>
+        </div>
+
+        <div class="field">
+          <label class="visually-hidden" for="signup-password">
+            Create a password
+          </label>
+
+          <input
+            id="signup-password"
+            name="password"
+            type="password"
+            placeholder="Create a password"
+            autocomplete="new-password"
+            minlength="8"
+            aria-describedby="password-hint signup-password-error"
+            required
+          >
+
+          <p id="password-hint" class="field-hint">
+            Use at least 8 characters.
+          </p>
+
+          <p
+            id="signup-password-error"
+            class="field-error"
+          ></p>
+        </div>
+
+        <button class="submit-button" type="submit">
+          Sign up
+        </button>
+
+        <div class="divider" aria-hidden="true">
+          <span>or</span>
+        </div>
+
+        <p class="switch-text">
+          Already have an account?
+          <a href="#login">Log in</a>
+        </p>
+      </form>
+
+      <!-- Password-reset form -->
+      <form id="reset-form" class="auth-form" novalidate hidden>
+        <div class="field">
+          <label class="visually-hidden" for="reset-email">
+            Email address
+          </label>
+
+          <input
+            id="reset-email"
+            name="email"
+            type="email"
+            placeholder="Enter your email"
+            autocomplete="email"
+            aria-describedby="reset-email-error"
+            required
+          >
+
+          <p
+            id="reset-email-error"
+            class="field-error"
+          ></p>
+        </div>
+
+        <button class="submit-button" type="submit">
+          Send reset link
+        </button>
+
+        <p class="switch-text reset-back">
+          <a href="#login">Back to log in</a>
+        </p>
+      </form>
+
+      <p
+        id="form-status"
+        class="form-status"
+        role="status"
+        aria-live="polite"
+        aria-atomic="true"
+      ></p>
+
+    </section>
+  </main>
+</body>
+</html>
