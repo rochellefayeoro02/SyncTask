@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>SyncTask | Home</title>
+
+  <link rel="stylesheet" href="task.css">
+  <script src="task.js" defer></script>
+</head>
+
+<body>
+    <div class="app">
+
+    <aside class="sidebar">
+        <a class="brand" href="#home" aria-label="SyncTask home">
+        <img class="brand-logo" src="SyncTaskLogo.svg" alt="" width="40"  height="40">
+        <span>SyncTask</span>
+        </a>
+
+    <nav aria-label="Main navigation">
+        <a class="nav-link" href="#home" aria-current="page" id="home-link">
+        <img src="home.png" class="nav-icon" alt="">
+        <span>Home</span></a>
+    </nav>
+
+        <p class="sidebar-note"> A little more organized.<br> A lot more together.</p>
+    </aside>
+
+    <main>
+
+      <!-- home -->
+    <section id="home" class="screen" aria-labelledby="home-title">
+        <header class="welcome">
+            <span class="eyebrow">YOUR TEAM STARTS HERE</span>
+
+        <h1 id="home-title" tabindex="-1">
+            Welcome to SyncTask, Pau! </h1>
+        <p>Create a workspace for your team or join an existing one.</p>
+    </header>
+
+    <div class="workspace-options">
+
+        <article class="option-card">
+        <span class="option-icon" aria-hidden="true">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round">
+            <path d="M12 5v14M5 12h14"></path>
+            </svg>
+        </span>
+
+            <h2>Create Workspace</h2>
+            <p> Give your projects, tasks, and team a place to come together.</p>
+            <a class="button" href="#create"> Create Workspace </a>
+
+        <ul class="benefit-list">
+            <li>Set up in minutes</li>
+            <li>Invite your team</li>
+            <li>Keep work organized</li>
+        </ul>
+        </article>
+
+        <article class="option-card">
+            <span class="option-icon option-icon-image"> <img src="group.png" alt=""> </span>
+            <h2>Join Workspace</h2>
+            <p>Already part of a team? Connect using your workspace invite.</p>
+            <a class="button" href="#join">  Join Workspace </a>
+
+            <ul class="benefit-list">
+              <li>Use your invite code</li>
+              <li>Find your teammates</li>
+              <li>Start collaborating</li>
+            </ul>
+          </article>
+
+        </div>
+        </section>
+
+     <!--workspace-->
+    <section id="create" class="screen" aria-labelledby="create-title" hidden>
+        <a class="back-link" href="#home">← Back to home</a>
+
+    <header class="page-heading">
+        <span class="eyebrow">A FRESH START</span>
+        <h1 id="create-title" tabindex="-1"> Create your <em>Workspace</em> </h1>
+
+          <p> Set up a shared space for your team.
+             Make room for your next big idea. </p>
+    </header>
+
+    <div class="split-layout">
+
+    <!-- create -->
+    <form id="create-form" class="form-card" novalidate>
+        <div class="field">
+            <label for="workspace-name">Workspace name</label>
+            <input id="workspace-name" name="workspace" type="text" placeholder="e.g. Acme Design Team" maxlength="80" required aria-describedby="workspace-error">
+
+            <small id="workspace-error" class="error"></small>
+        </div>
+
+        <div class="field">
+            <label for="organization"> Organization / school
+            <span>(optional)</span>
+            </label>
+
+            <input id="organization" name="organization" type="text" autocomplete="organization" placeholder="e.g. University, school, or company" maxlength="100">
+        </div>
+
+        <div class="field">
+            <label for="team-type">Team type</label>
+
+            <select id="team-type" name="teamType" required aria-describedby="team-error">
+                <option value="">Select your team type</option>
+                <option value="school">School / study group</option>
+                <option value="design">Design / creative</option>
+                <option value="development">
+                  Development / engineering
+                </option>
+                <option value="business">Business / operations</option>
+                <option value="other">Other</option>
+            </select>
+
+            <small id="team-error" class="error"></small>
+        </div>
+
+        <fieldset>
+            <legend>Expected team size</legend>
+
+        <div class="size-options">
+            <label class="size-choice">
+                <input type="radio" name="teamSize" value="1–6" checked>
+                <span>1–5</span>
+            </label>
+
+            <label class="size-choice">
+                <input type="radio" name="teamSize" value="6–15">
+                <span>6–15</span>
+            </label>
+
+            <label class="size-choice">
+                <input type="radio" name="teamSize" value="16–50">
+                <span>16–50</span>
+            </label>
+
+            <label class="size-choice">
+                <input type="radio" name="teamSize" value="150">
+                <span>150</span>
+            </label>
+        </div>
+        </fieldset>
+
+            <button class="button" type="submit">   Create Workspace</button>
+
+            <p class="form-status" role="status" aria-atomic="true"></p>
+
+            <p class="form-footer"> Already have a workspace?
+            <a href="#join">Join with a code</a>
+            </p>
+        </form>
+
+            <aside class="feature-panel">
+        <div class="team-art" aria-hidden="true">
+            <span class="floating-note note-one">✓</span>
+            <span class="floating-note note-two">✦</span>
+
+        <div class="avatars">
+            <span class="avatar peach">AM</span>
+            <span class="avatar lavender">JL</span>
+            <span class="avatar mint">SK</span>
+        </div>
+
+        <div class="project-preview">
+            <span class="preview-heading">Our next big idea</span>
+            <span class="preview-line"></span>
+            <span class="preview-line short"></span>
+            <span class="preview-check">✓ Everyone in sync</span>
+        </div>
+        </div>
+
+            <h2>Better work together</h2>
+
+            <p>
+              A workspace keeps your team connected,
+              your tasks clear, and your projects moving.
+            </p>
+
+            <ul class="feature-strip">
+              <li><span aria-hidden="true">＋</span>Invite</li>
+              <li><span aria-hidden="true">▤</span>Organize</li>
+              <li><span aria-hidden="true">↗</span>Achieve</li>
+            </ul>
+        </aside>
+
+    </div>
+    </section>
+
+     
+    <section id="join" class="screen" aria-labelledby="join-title" hidden>
+       
+        <a class="back-link" href="#home">← Back to home</a>
+
+        <header class="page-heading">
+        <span class="eyebrow">FIND YOUR PEOPLE</span>
+
+        <h1 id="join-title" tabindex="-1">
+            Join <em>Workspace</em>
+        </h1>
+
+        <p> Your team is waiting. Enter your invitation to get started.</p>
+    </header>
+
+    <div class="split-layout">
+
+        <form id="join-form" class="form-card" novalidate>
+    <div class="field">
+        <label for="invite"> Workspace code or invite link </label>
+
+            <input id="invite" name="invite" type="text" placeholder="Paste your code or invite link"  autocomplete="off"
+                autocapitalize="none" spellcheck="false" required aria-describedby="invite-help invite-error" >
+
+            <small id="invite-help" class="field-help"> Use the invitation shared by your workspace owner.</small>
+            <small id="invite-error" class="error"></small>
+    </div>
+
+            <p class="invite-help">
+              Don’t have an invite?
+              Ask your workspace owner to send you one.
+            </p>
+
+            <button class="button" type="submit">
+              Join Workspace
+            </button>
+
+            <p class="form-status" role="status" aria-atomic="true"></p>
+
+            <p class="form-footer">Want to create your own team instead?
+            <a href="#create">Create a workspace</a>
+            </p>
+        </form>
+
+         
+        <aside class="feature-panel">
+        <div class="team-art" aria-hidden="true">
+            <span class="floating-note note-one">↗</span>
+            <span class="floating-note note-two">✓</span>
+
+        <div class="avatars">
+            <span class="avatar peach">AM</span>
+            <span class="avatar lavender">YOU</span>
+            <span class="avatar mint">SK</span>
+        </div>
+
+        <div class="project-preview">
+            <span class="preview-heading">You belong here.</span>
+            <span class="preview-line"></span>
+            <span class="preview-line short"></span>
+            <span class="preview-check">✓ Let’s make it happen</span>
+        </div>
+        </div>
+
+        <h2>Join your team instantly</h2>
+
+        <p>
+            One shared space for your team’s projects,
+            plans, and everything in between.
+        </p>
+
+        <ul class="feature-strip">
+            <li><span aria-hidden="true">＋</span>Connect</li>
+            <li><span aria-hidden="true">◷</span>Stay in sync</li>
+            <li><span aria-hidden="true">ϟ</span>Get started</li>
+        </ul>
+        </aside>
+
+    </div>
+    </section>
+
+</main>
+</div>
+</body>
+</html>
